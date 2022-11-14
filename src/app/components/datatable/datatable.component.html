@@ -62,7 +62,7 @@
       </ng-container> 
       <br>
         <ng-container matColumnDef="sold">
-        <th mat-header-cell *matHeaderCellDef> Sold </th>
+        <th mat-header-cell *matHeaderCellDef> Sold  </th>
         <td mat-cell *matCellDef="let product" class="center" [matTooltip]="orders.get(product['id'])?.description ?? ''" matTooltipPosition="left">{{ orders.get(product['id'])?.amount ?? 0 }}</td>
         
       </ng-container> 
