@@ -1,0 +1,15 @@
+<form [formGroup]="orderForm">
+
+    <h4>Plase enter order info for {{data.productId}}. product name of {{data.title}} </h4>
+    <mat-form-field class="example-full-width orderInput" appearance="fill">
+        <mat-label>Amount</mat-label>
+        <input type="number" matInput placeholder="Ex. 10" value="0" formControlName="amount">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width orderInput" appearance="fill">
+        <mat-label>Enter a description</mat-label>
+        <textarea matInput placeholder="" formControlName="description"></textarea>
+    </mat-form-field>
+    <br>
+<button [disabled]="!orderForm.valid" mat-button mat-dialog-close cdkFocusInitial (click)="onNoClick()">Kaydet</button>
+</form>
